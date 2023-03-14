@@ -61,13 +61,29 @@ body {
   list-style: none;
   display: flex;
 }
-.link-emphasise {
-  border-bottom: 3px solid var(--blue-color);
+
+.main-navigation .under-line > a::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 55px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--blue-color);
+  bottom: -3px;
 }
-.main-navigation .under-line a {
-  color: var(--blue-color);
+.main-navigation .under-line-portfolio > a::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 59.31px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--blue-color);
+  bottom: -3px;
 }
 .main-navigation a {
+  position: relative;
   text-decoration: none;
   color: var(--black-color);
   font-weight: 500;
@@ -83,6 +99,9 @@ body {
 .main-navigation-contact {
   margin-left: auto;
 }
+.main-navigation-contact {
+  margin-left: auto;
+}
 .main-navigation-contact a {
   color: var(--spacies-color);
   margin-right: 50px;
@@ -94,15 +113,16 @@ body {
 .main-navigation-contact a[href="tel:+48111111111"] {
   margin-right: 0;
 }
+.main-navigation-contact li:hover,
+.main-navigation-contact li:focus,
+.main-navigation-contact li:active,
+.main-navigation a:focus,
 .main-navigation a:hover {
   outline: none;
   color: var(--blue-color);
   fill: var(--blue-color);
-}
-.main-navigation a:focus {
-  outline: none;
-  color: var(--blue-color);
-  fill: var(--blue-color);
+  --color2: var(--blue-color);
+  --color4: var(--blue-color);
 }
 
 /* footer styles */
@@ -535,7 +555,8 @@ figure .information-box {
   width: 100%;
   height: 100%;
   margin-bottom: 2px;
-  letter-spacing: 3%;
+  letter-spacing: 2px;
+  word-spacing: 3px;
 }
 
 figure:hover .information-box {
